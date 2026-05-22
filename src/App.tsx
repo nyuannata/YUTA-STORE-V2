@@ -174,7 +174,7 @@ export default function App() {
               ].map((item, idx) => (
                 <div 
                   key={idx} 
-                  className="relative bg-slate-950/20 border border-slate-900 p-6 rounded-2xl group hover:border-blue-500/20 transition-all duration-300 text-left overflow-hidden"
+                  className="relative bg-[#060e20]/80 border border-blue-900/30 p-6 rounded-2xl group hover:border-blue-500/30 hover:bg-[#08132b]/95 shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all duration-300 text-left overflow-hidden"
                 >
                   <div className="absolute top-4 right-4 text-3xl font-black text-blue-500/5 group-hover:text-blue-500/10 transition-colors select-none">
                     {item.step}

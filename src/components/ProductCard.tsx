@@ -81,7 +81,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div
-      className={`group relative bg-slate-950/40 backdrop-blur-sm border border-slate-900 rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-500 overflow-hidden min-h-[300px] h-full ${getGlowColor(
+      className={`group relative bg-[#060e20]/80 backdrop-blur-md border border-blue-900/30 rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-500 overflow-hidden min-h-[300px] h-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-blue-700/40 hover:bg-[#08132b]/95 ${getGlowColor(
         product.logoColor
       )}`}
     >
@@ -142,8 +142,8 @@ export function ProductCard({ product }: ProductCardProps) {
                       onClick={() => toggleSelect(variant, item)}
                       className={`flex items-center justify-between text-xs cursor-pointer px-3 py-2.5 rounded-xl border transition-all duration-300 select-none ${
                         isSelected
-                          ? 'bg-blue-500/20 border-blue-500/80 shadow-[0_0_12px_rgba(59,130,246,0.15)] text-white'
-                          : 'bg-[#0f172a]/50 border-slate-900 hover:bg-slate-800/30 hover:border-slate-800 text-gray-400'
+                          ? 'bg-blue-600/30 border-blue-500/85 shadow-[0_0_12px_rgba(59,130,246,0.25)] text-white'
+                          : 'bg-[#040916]/80 border-blue-950/80 hover:bg-[#0a1530]/80 hover:border-blue-900/60 text-gray-400'
                       }`}
                     >
                       <span
