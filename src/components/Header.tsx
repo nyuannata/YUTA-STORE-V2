@@ -18,7 +18,7 @@ export function Header() {
 
         {/* Main Title with Premium Gradient */}
         <h1
-          className="text-6xl sm:text-7xl md:text-8xl font-black uppercase tracking-tight mb-2 select-none"
+          className="text-5xl sm:text-7xl md:text-8xl font-black uppercase tracking-tight mb-2 select-none"
           style={{
             background: 'linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #3b82f6 100%)',
             WebkitBackgroundClip: 'text',
@@ -29,7 +29,7 @@ export function Header() {
           YUTA STORE
         </h1>
 
-        <p className="text-gray-400 text-sm sm:text-base max-w-lg mt-2 font-medium tracking-wide">
+        <p className="text-gray-400 text-xs sm:text-sm md:text-base max-w-lg mt-2 font-medium tracking-wide">
           Penyedia Layanan Akun & Aplikasi Premium Murah, Cepat, Legal, dan Bergaransi Penuh.
         </p>
 

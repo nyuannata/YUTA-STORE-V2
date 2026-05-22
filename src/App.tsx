@@ -14,7 +14,8 @@ export default function App() {
     const streamingIds = [
       'netflix', 'youtube', 'wetv', 'youku', 'spotify', 'disneyplus', 'iqiyi', 'vidio', 
       'amazonprime', 'hbomax', 'viu', 'iflix', 'bstation', 'crunchyroll', 'drakorid', 
-      'gagaolala', 'catchplay', 'loklok', 'rctiplus', 'sushiroll', 'moviebox', 'applemusic'
+      'gagaolala', 'catchplay', 'loklok', 'rctiplus', 'sushiroll', 'moviebox', 'applemusic',
+      'dramabox'
     ];
     const editingIds = [
       'capcut', 'canva', 'meitu', 'alightmotion', 'reminiweb', 'ibispaint', 'picsart', 'procreate'
@@ -85,29 +86,32 @@ export default function App() {
               </div>
             </div>
 
-            {/* Category Tabs Selection */}
-            <div className="flex flex-wrap justify-center items-center gap-2 max-w-4xl mx-auto select-none">
-              {categories.map((cat) => {
-                const IconComponent = cat.icon;
-                const isActive = activeCategory === cat.id;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
-                      isActive 
-                        ? 'bg-blue-600 border-transparent text-white shadow-[0_4px_15px_rgba(59,130,246,0.35)] scale-102' 
-                        : 'bg-[#090f1d]/40 border-slate-900/80 text-gray-400 hover:text-gray-200 hover:bg-slate-900/60 hover:border-slate-800'
-                    }`}
-                  >
-                    <IconComponent className={`w-3.5 h-3.5 ${isActive ? 'text-white' : 'text-gray-500'}`} />
-                    {cat.label}
-                  </button>
-                );
-              })}
+            {/* Category Tabs Selection: Horizontal Swipeable on Mobile */}
+            <div className="w-full max-w-4xl mx-auto overflow-x-auto no-scrollbar pb-2 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 select-none">
+              <div className="flex md:flex-wrap justify-start md:justify-center items-center gap-2 min-w-max md:min-w-0">
+                {categories.map((cat) => {
+                  const IconComponent = cat.icon;
+                  const isActive = activeCategory === cat.id;
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => setActiveCategory(cat.id)}
+                      className={`flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer whitespace-nowrap ${
+                        isActive 
+                          ? 'bg-blue-600 border-transparent text-white shadow-[0_4px_15px_rgba(59,130,246,0.35)] scale-102' 
+                          : 'bg-[#090f1d]/40 border-slate-900/80 text-gray-400 hover:text-gray-200 hover:bg-slate-900/60 hover:border-slate-800'
+                      }`}
+                    >
+                      <IconComponent className={`w-3.5 h-3.5 ${isActive ? 'text-white' : 'text-gray-500'}`} />
+                      {cat.label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
           </div>
+
 
           {/* Products Grid Section */}
           {filteredProducts.length > 0 ? (

@@ -81,7 +81,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div
-      className={`group relative bg-slate-950/40 backdrop-blur-sm border border-slate-900 rounded-2xl p-5 flex flex-col justify-between transition-all duration-500 overflow-hidden min-h-[300px] h-full ${getGlowColor(
+      className={`group relative bg-slate-950/40 backdrop-blur-sm border border-slate-900 rounded-2xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-500 overflow-hidden min-h-[300px] h-full ${getGlowColor(
         product.logoColor
       )}`}
     >
